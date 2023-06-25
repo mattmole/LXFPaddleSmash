@@ -133,7 +133,6 @@ class BaseSprite(pygame.sprite.Sprite):
     def testClock(self):
         a = self._clock.get_time()
         self._timeElapsed += a
-        print(self._countdown, self._timeElapsed)
         if self._timeElapsed >= self._countdown * 1000:
             if self._powerValue == Constants.ExtraBall:
                 self.kill()

@@ -47,8 +47,6 @@ class Brick(BaseSprite):
 
             if self.collisionsRemaining > 0:
                 self.collisionsRemaining -= collisionPower
-                print(self.colour, ': ', self.collisionsRemaining,
-                      '/', self._numCollisions)
             if self.collisionsRemaining > 0:
                 self.alpha -= self.alpha / self._numCollisions
                 self.setAlpha()

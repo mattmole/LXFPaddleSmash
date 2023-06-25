@@ -64,85 +64,23 @@ font = pygame.font.SysFont(None, int(screenHeight / 20))
 # Create an object for the main ball
 ball = Ball(ballRadius, ballRadius, screenWidth /
             4, screenHeight / 2, ballSpeed)
-# ball2 = Ball(ballRadius, ballRadius, screenWidth /
-#             4, screenHeight / 2, 5, countdown=10, type="secondary")
 
 paddle = Paddle(paddleWidth, paddleHeight, 0, screenHeight - 100, paddleSpeed)
 paddle2 = Paddle(paddleWidth, paddleHeight,
                  screenWidth - 400, screenHeight - 100, paddleSpeed)
 
+# Create groups to store the balls
 ballGroup = pygame.sprite.Group()
 ballGroup.add(ball)
-# ballGroup.add(ball2)
-
 secondaryBallGroup = pygame.sprite.Group()
-# secondaryBallGroup.add(ball2)
 
+# Create a group to store the paddles
 paddleGroup = pygame.sprite.Group()
 paddleGroup.add(paddle)
-# paddleGroup.add(paddle2)
 
-# brick = Brick(brickRenderWidth / 8, brickHeight, (screenWidth -
-# brickRenderWidth) / 2, 150, Colours.Pink, numCollisions=-1)
-
-brick = Brick(90, brickHeight, 100, 150, Constants.Pink, numCollisions=-1)
-brick2 = Brick(90, brickHeight, 191, 150, Constants.Green, numCollisions=-1)
-brick3 = Brick(90, brickHeight, 282, 150, Constants.Blue, numCollisions=3)
-brick4 = Brick(90, brickHeight, 373, 150, Constants.Red, numCollisions=1)
-brick5 = Brick(90, brickHeight, 464, 150, Constants.Orange, numCollisions=2)
-brick6 = Brick(90, brickHeight, 555, 150, Constants.Blue, numCollisions=3)
-brick7 = Brick(90, brickHeight, 646, 150, Constants.Red, numCollisions=1)
-brick8 = Brick(90, brickHeight, 737, 150, Constants.Orange, numCollisions=2)
-brick9 = Brick(90, brickHeight, 100, 150+brickHeight +
-               1, Constants.Pink, numCollisions=3)
-brick10 = Brick(90, brickHeight, 191, 150+brickHeight +
-                1, Constants.Green, numCollisions=1)
-brick11 = Brick(90, brickHeight, 282, 150+brickHeight +
-                1, Constants.Blue, numCollisions=2)
-brick12 = Brick(90, brickHeight, 373, 150+brickHeight +
-                1, Constants.Red, numCollisions=3)
-brick13 = Brick(90, brickHeight, 464, 150+brickHeight +
-                1, Constants.Orange, numCollisions=1)
-brick14 = Brick(90, brickHeight, 555, 150+brickHeight +
-                1, Constants.Blue, numCollisions=2)
-brick15 = Brick(90, brickHeight, 646, 150+brickHeight +
-                1, Constants.Red, numCollisions=3)
-brick16 = Brick(90, brickHeight, 737, 150+brickHeight +
-                1, Constants.Orange, numCollisions=1)
-
+# Create a group to store the bricks
 brickGroup = pygame.sprite.Group()
 secondaryBrickGroup = pygame.sprite.Group()
-# brickGroup.add(brick)
-# brickGroup.add(brick2)
-# brickGroup.add(brick3)
-# brickGroup.add(brick4)
-# brickGroup.add(brick5)
-# brickGroup.add(brick6)
-# brickGroup.add(brick7)
-# brickGroup.add(brick8)
-# brickGroup.add(brick9)
-# brickGroup.add(brick10)
-# brickGroup.add(brick11)
-# brickGroup.add(brick12)
-# brickGroup.add(brick13)
-# brickGroup.add(brick14)
-# brickGroup.add(brick15)
-# brickGroup.add(brick16)
-
-# brickGroup2.add(brick3)
-# brickGroup2.add(brick4)
-# brickGroup2.add(brick5)
-# brickGroup2.add(brick6)
-# brickGroup2.add(brick7)
-# brickGroup2.add(brick8)
-# brickGroup2.add(brick9)
-# brickGroup2.add(brick10)
-# brickGroup2.add(brick11)
-# brickGroup2.add(brick12)
-# brickGroup2.add(brick13)
-# brickGroup2.add(brick14)
-# brickGroup2.add(brick15)
-# brickGroup2.add(brick16)
 
 # Create a group to store the laser "bullets"
 laserBulletGroup = pygame.sprite.Group()
