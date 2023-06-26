@@ -15,9 +15,15 @@ Gold = (204, 153, 0)
 Purple = (153, 0, 255)
 Grey = (179, 179, 179)
 
+# Add the colours to a list
 ColourList = [Red, Green, Blue, Black, White,
               Pink, Yellow, Orange, Cream, Brown, Gold, Purple, Grey]
+
+# Randomise the list of colours
 random.shuffle(ColourList)
+
+# Function to return a colour. If the value is greater than the length of the list
+# subtract the length of the list until the value is within range and then return a colour
 
 
 def ReturnColour(num):
@@ -30,16 +36,17 @@ def ReturnColour(num):
 
 
 # Define constants for the power ups
-NoValue = 0         # Does not need implementing
-Fireball = 1        # Implemented
-Laser = 2           # Implemented
-ExtraBall = 4       # Implemented
-GrowPaddle = 8      # Implemented
-SecondPaddle = 16   # Implemented
-ShrinkPaddle = 32   # Implemented
-SpeedUpBall = 64    # Implemented
-SlowDownBall = 128  # Implemented
+NoValue = 0
+Fireball = 1
+Laser = 2
+ExtraBall = 4
+GrowPaddle = 8
+SecondPaddle = 16
+ShrinkPaddle = 32
+SpeedUpBall = 64
+SlowDownBall = 128
 
+# Add any constants to a list that are for Paddle related power values
 PaddlePowerList = [GrowPaddle, ShrinkPaddle, SecondPaddle]
 
 # Define constants for direction of objects
@@ -47,6 +54,3 @@ Left = -1
 Right = 1
 Up = -1
 Down = 1
-
-if __name__ == "__main__":
-    pass
