@@ -35,6 +35,10 @@ class ParseConfig:
     def config(self):
         return self._config
 
+    @property
+    def filePath(self):
+        return self._filePath
+
 
 class ParseLevelConfig(ParseConfig):
     def __init__(self, filePath):
@@ -115,6 +119,9 @@ class ParseLevelConfig(ParseConfig):
         if "lives" not in self._levelConfig["options"]:
             self._levelConfig["options"]["lives"] = None
         return self._levelConfig
+
+    def __repr__(self):
+        return f"{self.filePath}: {self.levelConfig['options']['name']}"
 
 
 if __name__ == "__main__":
