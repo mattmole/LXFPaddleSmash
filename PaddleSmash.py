@@ -1,14 +1,14 @@
 # Import the pygame library and initialise the game engine
 import pygame
+import Constants
+import os
+import pygame_menu
 from Ball import Ball
 from Paddle import Paddle
 from LaserBullet import LaserBullet
 from Brick import *
-import Constants
 from ParseConfig import ParseLevelConfig
 from rich import print
-import os
-import pygame_menu
 
 # Initialise pygame
 pygame.init()

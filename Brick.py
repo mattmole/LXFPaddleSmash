@@ -1,7 +1,5 @@
 # Import the pygame library and initialise the game engine
-import pygame
 from BaseSprite import BaseSprite
-import time
 
 # Define a class to create sprites for the bricks
 

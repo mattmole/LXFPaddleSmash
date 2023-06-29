@@ -24,7 +24,7 @@ class BrickConfig:
     def powerValue(self):
         return self._powerValue
 
-# Create a class to store level information
+# Create a class to store config information
 
 
 class ParseConfig:

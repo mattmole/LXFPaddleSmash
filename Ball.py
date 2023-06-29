@@ -1,9 +1,7 @@
 # Import the pygame library and initialise the game engine
-import pygame
 import random
 import math
 from BaseSprite import BaseSprite
-import Constants
 
 # Define a class to create sprites for the ball, which inherits from the BaseSprite class
 
