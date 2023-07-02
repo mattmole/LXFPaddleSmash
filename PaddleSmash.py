@@ -267,7 +267,7 @@ def startLevel():
             # Detect if any balls collide with the bricks
             brickCollidedWith = ballObject.detectCollision(brickGroup)
             if brickCollidedWith != None:
-                if ballObject.powerValue != Constants.Fireball:
+                if ballObject.powerValue != Constants.Fireball or (ballObject.powerValue == Constants.Fireball and brickObject.numCollisions == -1):
                     ballObject.directionY *= -1
                 # If a brick has been collided with, call the relevant function to determine whether
                 # it should be destroyed or not
