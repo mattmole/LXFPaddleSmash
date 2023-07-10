@@ -18,8 +18,8 @@ fullScreen = False
 
 # Variables to define sizes of the window and the paddles
 screenRes = (pygame.display.Info().current_w, pygame.display.Info().current_h)
-screenWidth = pygame.display.Info().current_w / 2
-screenHeight = pygame.display.Info().current_h - 100
+screenWidth = int(pygame.display.Info().current_w / 2)
+screenHeight = int(pygame.display.Info().current_h - 100)
 if fullScreen == True:
     # Grab the resolution of the display if needed
     screenWidth, screenHeight = pygame.display.Info(
