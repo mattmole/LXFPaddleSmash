@@ -130,11 +130,15 @@ numBrickRows = None
 
 
 def startLevel():
-
     # The following variables are defined outside of the function and need to be updated as such
-    global createLaserBullets, frameCount, brickHeight, gameScore
+    global createLaserBullets, frameCount, brickHeight, gameScore, laserTimeCounter
+
+    # Empty the groups, so that we can start afresh
+    brickGroup.empty()
+    secondaryBrickGroup.empty()
 
     # Grab file paths from the config data
+    print(levelConfig.filePath)
     bgMusicFile = levelConfig.levelConfig["options"]["audio"]
     bgFile = levelConfig.levelConfig["options"]["background"]
 
@@ -432,6 +436,7 @@ def setLevel(name, positionInList, filePath, numbers):
     # Use the dictionary contain all config files and assign the relevant values to the variables
     global levelConfig
     levelConfig = levelConfigFileDict[filePath]
+    print(filePath)
 
 
 # Let's draw the menu
